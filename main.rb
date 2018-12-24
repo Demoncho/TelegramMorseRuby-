@@ -3,15 +3,15 @@ require 'rubygems'
 require 'active_record'
 require 'pg'
 
-TOKEN = '655322117:AAEp8y0bF7Hc3IUgwI9kn5LkqyiTDmWAkCw'
+TOKEN = 'Bot_Token'
 
 Telegram::Bot::Client.run(TOKEN, logger: Logger.new($stderr)) do |bot|
   bot.listen do |message|
     case message.text
     when '/start', '/start start'
       bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}")
-    when 'A', '.-'
-      bot.api.send_message(chat_id: message.chat.id, text: 'A = .-')
+    when 'А', '.-'
+      bot.api.send_message(chat_id: message.chat.id, text: 'А = .-')
     when 'Б', '-...'
       bot.api.send_message(chat_id: message.chat.id, text: 'Б = -...')
     when 'В', '.--'
