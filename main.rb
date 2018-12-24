@@ -1,6 +1,6 @@
 require 'telegram/bot'
 
-TOKEN = '655322117:AAEp8y0bF7Hc3IUgwI9kn5LkqyiTDmWAkCw'
+TOKEN = 'BOT_TOKKEN_ID'
 
 Telegram::Bot::Client.run(TOKEN, logger: Logger.new($stderr)) do |bot|
   bot.listen do |message|
